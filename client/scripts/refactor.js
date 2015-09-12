@@ -67,7 +67,7 @@ var MessageView = Backbone.View.extend({
   },
 
   template: _.template('<div class="chat" data-id="<%- id %>"> \
-                          <div class="user"><%- name %></div> \
+                          <div class="user"><%- username %></div> \
                           <div class="text"><%- message %></div> \
                         </div>'),
 
