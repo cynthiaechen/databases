@@ -24,6 +24,10 @@ app.use("/classes", router);
 // Serve the client files
 app.use(express.static(__dirname + "/../client"));
 
+app.get('/', function(req,res){
+  res.redirect("http://127.0.0.1:3000/refactor.html");
+});
+
 // If we are being run directly, run the server.
 if (!module.parent) {
   app.listen(app.get("port"));
