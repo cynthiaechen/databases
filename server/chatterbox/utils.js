@@ -8,8 +8,8 @@ var headers = {
 
 exports.sendResponse = function(response, data, statusCode) {
   statusCode = statusCode || 200;
-  response.writeHead(statusCode, headers);
-  response.end(JSON.stringify(data));
+  response.set(headers);
+  response.status(statusCode).send(JSON.stringify(data));
 };
 
 exports.collectData = function(request, callback) {

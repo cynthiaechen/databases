@@ -6,6 +6,8 @@ CREATE TABLE messages (
   id integer null auto_increment default null, 
   message varchar(500) null default null, 
   timeCreated datetime(6) null default null,
+  userId integer not null default -1,
+  roomId integer not null default -1,
   primary key (id)
 );
 /* Create other tables and define schemas for them here! */
